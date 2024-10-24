@@ -1,0 +1,12 @@
+r-dialog-title {
+  color: var(--foreground);
+
+  section {
+    font-size: 1.1rem;
+
+    &.center {
+      padding-left: 5px;
+      box-sizing: border-box;
+    }
+  }
+}
