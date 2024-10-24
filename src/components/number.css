@@ -1,0 +1,85 @@
+r-number {
+  position: relative;
+  display: flex;
+
+  label {
+    position: absolute;
+    left: 0.938rem;
+    z-index: 1;
+    background: transparent;
+    pointer-events: none;
+    color: var(--input-foreground);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s;
+
+    &.error {
+      color: var(--error-foreground);
+    }
+  }
+
+  input:focus-visible + label,
+  label.has-value {
+    top: 0.344rem;
+    font-size: 70%;
+    transform: translateY(0);
+    transition: 0.2s;
+  }
+
+  .currency-or-percentage {
+    position: absolute;
+    transform: translateY(-50%);
+    right: 0.938rem;
+    z-index: 1;
+    background: transparent;
+    pointer-events: none;
+    font-size: 13px;
+    top: 50%;
+    color: var(--input-foreground);
+
+    &.error {
+      color: var(--error-foreground);
+    }
+  }
+
+  input {
+    height: 2.8rem;
+    border: none;
+    width: 100%;
+    padding: 0.688rem 0.938rem;
+    box-sizing: border-box;
+    border-radius: var(--roundness);
+    color: var(--input-foreground);
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--input-background);
+    position: relative;
+
+    &.has-label {
+      &.has-value,
+      &:focus-visible {
+        padding: 1.2rem 0.938rem 0.313rem;
+      }
+    }
+
+    &.error {
+      background-color: var(--error);
+      color: var(--error-foreground);
+    }
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    border: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    appearance: textfield;
+    border: none;
+    -moz-appearance: textfield;
+  }
+}

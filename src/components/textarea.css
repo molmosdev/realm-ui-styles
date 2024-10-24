@@ -1,0 +1,56 @@
+r-textarea {
+  position: relative;
+  display: flex;
+
+  label {
+    position: absolute;
+    left: 0.938rem;
+    top: 0.688rem;
+    width: calc(100% - (0.938rem * 2));
+    z-index: 1;
+    pointer-events: none;
+    font-size: 13px;
+    color: var(--input-foreground);
+    background: linear-gradient(0deg, transparent 0%, var(--light-grey) 50%);
+    pointer-events: none;
+    transition: 0.2s;
+
+    &.error {
+      color: var(--error-foreground);
+    }
+  }
+
+  textarea:focus-visible + label,
+  label.has-value {
+    top: 1px;
+    font-size: 70%;
+    padding: 0.344rem 0 0.5rem 0;
+    transition: 0.2s;
+  }
+
+  textarea {
+    min-height: 2.8rem;
+    border: none;
+    width: 100%;
+    padding: 0.688rem 0.938rem;
+    box-sizing: border-box;
+    border-radius: var(--roundness);
+    color: var(--input-foreground);
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--input-background);
+    position: relative;
+
+    &.has-label {
+      &:focus-visible,
+      &.has-value {
+        padding: 1.2rem 0.938rem 0.313rem;
+      }
+    }
+
+    &.error {
+      background-color: var(--error);
+      color: var(--error-foreground);
+    }
+  }
+}

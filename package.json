@@ -1,0 +1,11 @@
+{
+  "name": "@realm-ui/styles",
+  "version": "0.0.0-beta.0.0.18",
+  "main": "src/index.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "molmos",
+  "license": "ISC",
+  "description": ""
+}

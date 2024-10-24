@@ -1,0 +1,12 @@
+@import "colors.css";
+@import "fonts.css";
+@import "./components/components.css";
+
+* {
+  font-family: "Inter", sans-serif;
+  outline-color: var(--primary);
+}
+
+:root {
+  --roundness: 0.5rem;
+}

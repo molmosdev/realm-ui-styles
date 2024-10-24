@@ -1,0 +1,111 @@
+r-select {
+  position: relative;
+
+  .select-box {
+    z-index: 2;
+    box-sizing: border-box;
+    min-height: 2.8rem;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding: 0.688rem 0.938rem;
+    border-radius: var(--roundness);
+    color: var(--input-foreground);
+    background-color: var(--input-background);
+    display: flex;
+    align-items: center;
+
+    .right-button {
+      position: absolute;
+      top: 0.125rem;
+      height: calc(100% - 0.25rem);
+      width: 2.6rem;
+      right: 0.125rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, transparent, var(--light-grey) 50%);
+      border-radius: 0 var(--roundness) var(--roundness) 0;
+
+      &:not(.clearable) {
+        pointer-events: none;
+      }
+    }
+
+    &.has-label {
+      &.has-value {
+        padding: 1.2rem 0.938rem 0.313rem;
+      }
+    }
+
+    label {
+      position: absolute;
+      background: transparent;
+      transition: 0.2s;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &.has-value,
+      &.options-open {
+        transition: 0.2s;
+        top: 0.344rem;
+        font-size: 70%;
+        transform: translateY(0);
+      }
+    }
+
+    &.error {
+      background-color: var(--error);
+      color: var(--error-foreground);
+
+      .arrows {
+        background: linear-gradient(to right, transparent, var(--error) 50%);
+      }
+    }
+  }
+
+  .dropdown-wrapper {
+    z-index: 3;
+    position: absolute;
+    background: white;
+    box-shadow: 0 0 0.25rem 0.125rem rgba(1, 1, 1, 0.01);
+    border-radius: var(--roundness);
+    border: 1px solid
+      color-mix(in srgb, var(--foreground) 10%, var(--background));
+    min-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    padding-bottom: 0.313rem;
+
+    &.down {
+      top: calc(100% + 0.4rem);
+    }
+
+    &.up {
+      bottom: calc(100% + 0.4rem);
+    }
+
+    .dropdown {
+      width: 100%;
+      scroll-behavior: smooth;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      padding: 0 0.313rem;
+      box-sizing: border-box;
+      margin: 0;
+
+      .no-options {
+        margin-top: 0.313rem;
+        padding: 0.688rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--foreground);
+      }
+    }
+  }
+}
