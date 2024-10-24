@@ -9,4 +9,5 @@
 
 :root {
   --roundness: 0.5rem;
+  --button-padding-inline: 1rem;
 }
