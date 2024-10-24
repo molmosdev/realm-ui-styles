@@ -13,6 +13,7 @@ r-button {
     transition: background-color 0.2s;
     width: 100%;
     font-size: 100%;
+    border: none;
 
     &.primary {
       background-color: var(--primary);
