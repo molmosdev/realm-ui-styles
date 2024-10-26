@@ -9,7 +9,6 @@ r-textarea {
     width: calc(100% - (0.938rem * 2));
     z-index: 1;
     pointer-events: none;
-    font-size: 13px;
     color: var(--input-foreground);
     background: linear-gradient(0deg, transparent 0%, var(--light-grey) 50%);
     pointer-events: none;

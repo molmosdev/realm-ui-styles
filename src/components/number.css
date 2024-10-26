@@ -33,7 +33,6 @@ r-number {
     z-index: 1;
     background: transparent;
     pointer-events: none;
-    font-size: 13px;
     top: 50%;
     color: var(--input-foreground);
 
