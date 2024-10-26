@@ -1,0 +1,7 @@
+r-tabs {
+  .tabs {
+    display: flex;
+    gap: 0.4rem;
+    overflow-x: auto;
+  }
+}

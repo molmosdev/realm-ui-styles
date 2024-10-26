@@ -1,0 +1,36 @@
+r-tab {
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.8rem;
+    padding-inline: var(--button-padding-inline);
+    border-radius: var(--roundness);
+    box-sizing: border-box;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s;
+    width: 100%;
+    font-size: 100%;
+    border: none;
+    user-select: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.selected {
+      background-color: var(--secondary);
+    }
+
+    &:not(.selected) {
+      scale: 0.9;
+      background-color: color-mix(in srgb, white 70%, var(--secondary));
+
+      &.highlighted {
+        background-color: var(--secondary);
+      }
+    }
+  }
+}
