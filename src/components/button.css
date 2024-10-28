@@ -15,6 +15,12 @@ r-button {
     font-size: 100%;
     border: none;
 
+    &:not(:has(span)) {
+      &:has(.icon) {
+        width: 2.8rem;
+      }
+    }
+
     &.primary {
       background-color: var(--primary);
       color: var(--primary-foreground);
