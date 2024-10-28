@@ -1,9 +1,11 @@
 r-tab {
+  height: 100%;
+
   span {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 2.8rem;
+    height: 100%;
     padding-inline: var(--button-padding-inline);
     border-radius: var(--roundness);
     box-sizing: border-box;
@@ -21,15 +23,20 @@ r-tab {
     }
 
     &.selected {
-      background-color: var(--secondary);
+      background-color: color-mix(
+        in srgb,
+        var(--secondary-foreground) 5%,
+        var(--secondary)
+      );
     }
 
     &:not(.selected) {
-      scale: 0.9;
-      background-color: color-mix(in srgb, white 70%, var(--secondary));
-
       &.highlighted {
-        background-color: var(--secondary);
+        background-color: color-mix(
+          in srgb,
+          var(--secondary-foreground) 5%,
+          var(--secondary)
+        );
       }
     }
   }
