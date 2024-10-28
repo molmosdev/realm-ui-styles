@@ -30,6 +30,14 @@ r-select {
       &:not(.clearable) {
         pointer-events: none;
       }
+
+      &.error {
+        background: linear-gradient(to right, transparent, var(--error) 50%);
+
+        svg {
+          stroke: var(--error-foreground);
+        }
+      }
     }
 
     &.has-label {
@@ -51,6 +59,10 @@ r-select {
         top: 0.344rem;
         font-size: 70%;
         transform: translateY(0);
+      }
+
+      &.error {
+        color: var(--error-foreground);
       }
     }
 
