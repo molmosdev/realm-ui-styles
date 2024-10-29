@@ -1,0 +1,57 @@
+r-switch {
+  display: flex;
+  justify-content: flex-start;
+
+  section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 34px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .switch-container {
+      width: 30px;
+      min-width: 30px;
+      height: 15px;
+      background-color: color-mix(in srgb, white 30%, var(--secondary));
+      border-radius: 25px;
+      position: relative;
+      cursor: pointer;
+      border: 2px solid color-mix(in srgb, white 30%, var(--secondary));
+
+      .switch {
+        width: 15px;
+        height: 15px;
+        background-color: color-mix(
+          in srgb,
+          var(--secondary-foreground) 30%,
+          var(--secondary)
+        );
+        border-radius: 50%;
+        position: absolute;
+        transform: translateX(0);
+        top: 0;
+        left: 0;
+        transition: 0.3s;
+
+        &.false {
+          transform: translateX(0);
+          opacity: 0.3;
+          transition: 0.3s;
+        }
+
+        &.true {
+          transform: translateX(100%);
+          transition: 0.3s;
+        }
+      }
+    }
+
+    .label {
+      color: var(--foreground);
+    }
+  }
+}
