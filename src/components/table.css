@@ -16,6 +16,7 @@ r-table {
   .scroll-section {
     overflow-y: auto;
     scrollbar-width: thin;
+    overscroll-behavior-block: none;
   }
 }
 
