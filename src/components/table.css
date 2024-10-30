@@ -1,12 +1,12 @@
 r-table {
   display: flex;
-  width: 100%;
+  flex: 1;
+  width: 100px;
   flex-direction: column;
   align-items: flex-start;
   overflow-x: auto;
   scrollbar-width: thin;
   border: 1px solid var(--secondary);
-
   background: var(--secondary);
   position: relative;
   height: 100%;
@@ -16,7 +16,6 @@ r-table {
   .scroll-section {
     overflow-y: auto;
     scrollbar-width: thin;
-    padding-right: 36px;
   }
 }
 
@@ -29,10 +28,6 @@ r-row {
     background: var(--background);
     color: var(--foreground);
 
-    &:hover {
-      cursor: pointer;
-    }
-
     &.header {
       background: color-mix(in srgb, white 50%, var(--secondary));
       color: var(--primary-foreground);
@@ -40,10 +35,17 @@ r-row {
       border-top: 0;
     }
 
-    &:not(.header) {
-      &:hover {
-        background-color: var(--secondary);
+    &:hover {
+      &.clickable {
+        cursor: pointer;
+        &:not(.header) {
+          background-color: var(--secondary);
+        }
       }
+    }
+
+    &.highlighted {
+      background: color-mix(in srgb, white 95%, var(--primary));
     }
   }
 }
