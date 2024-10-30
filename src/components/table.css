@@ -5,6 +5,7 @@ r-table {
   flex-direction: column;
   align-items: flex-start;
   overflow-x: auto;
+  overscroll-behavior-inline: none;
   scrollbar-width: thin;
   border: 1px solid var(--secondary);
   background: var(--secondary);
@@ -17,7 +18,6 @@ r-table {
     overflow-y: auto;
     scrollbar-width: thin;
     overscroll-behavior-block: none;
-    overscroll-behavior-inline: none;
   }
 }
 
