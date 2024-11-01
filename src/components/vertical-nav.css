@@ -49,13 +49,7 @@ r-vertical-nav {
         flex-direction: column;
         gap: 0.2rem;
         padding-left: 1rem;
-        opacity: 1;
-        transition: opacity ease 0.3s 0.3s allow-discrete,
-          padding-left ease 0.3s;
-
-        @starting-style {
-          opacity: 0;
-        }
+        transition: padding-left ease 0.3s;
       }
     }
 
@@ -66,8 +60,14 @@ r-vertical-nav {
         gap: 0.7rem;
         height: 2.8rem;
         padding-inline: 1rem;
-        transition: padding-inline ease 0.3s;
         border-radius: var(--roundness);
+        opacity: 1;
+        transition: opacity ease 0.3s 0.3s allow-discrete,
+          padding-inline ease 0.3s;
+
+        @starting-style {
+          opacity: 0;
+        }
 
         &:hover {
           cursor: pointer;
@@ -157,7 +157,7 @@ r-vertical-nav {
 
         .nested-wrapper {
           padding-left: 0rem;
-          transition-delay: 0s, 0.3s;
+          transition-delay: 0.3s;
         }
       }
 
