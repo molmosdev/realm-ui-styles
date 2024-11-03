@@ -4,7 +4,7 @@ r-vertical-nav {
     flex-direction: column;
     gap: 0.2rem;
     user-select: none;
-    width: 200px;
+    width: var(--vertical-nav-width);
     transition: width ease 0.3s;
 
     r-vertical-nav-group {
@@ -86,7 +86,7 @@ r-vertical-nav {
     }
 
     &.extended {
-      width: 200px;
+      width: var(--vertical-nav-width);
 
       r-vertical-nav-group {
         .group-wrapper {
