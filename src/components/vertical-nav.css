@@ -33,6 +33,7 @@ r-vertical-nav {
           gap: 0.7rem;
         }
 
+        .group-icon,
         .group-text {
           transition: opacity ease 0.3s, display ease 0.3s allow-discrete;
         }
@@ -92,6 +93,7 @@ r-vertical-nav {
         .group-wrapper {
           padding-inline: 1rem 0.8rem;
 
+          .group-icon,
           .group-text {
             opacity: 1;
             display: block;
@@ -144,7 +146,7 @@ r-vertical-nav {
           transition-delay: 0.3s;
           transition-property: padding-inline;
 
-          .group-text {
+          .group-icon .group-text {
             opacity: 0;
             display: none;
           }
