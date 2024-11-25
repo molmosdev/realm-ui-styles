@@ -96,7 +96,7 @@ r-vertical-nav {
           .group-icon,
           .group-text {
             opacity: 1;
-            display: block;
+            display: flex;
             transition-delay: 0.3s;
 
             @starting-style {
@@ -106,7 +106,7 @@ r-vertical-nav {
 
           .group-arrows {
             opacity: 1;
-            display: block;
+            display: flex;
             transition-delay: 0.3s;
 
             @starting-style {
@@ -125,7 +125,7 @@ r-vertical-nav {
 
           .item-text {
             opacity: 1;
-            display: block;
+            display: flex;
             transition-delay: 0.3s;
 
             @starting-style {
