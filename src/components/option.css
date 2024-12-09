@@ -8,7 +8,7 @@ r-option {
     box-sizing: border-box;
     border-radius: 0.4rem;
     transition: 0.1s;
-    color: var(--secondary-foreground);
+    color: var(--foreground);
     margin: 0;
 
     &.highlighted {
