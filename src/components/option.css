@@ -1,12 +1,14 @@
 r-option {
   padding-top: 0.313rem;
+  --dynamic-border-radius: calc(var(--roundness) - (0.313rem / 2));
+  --standard-border-radius: calc(0.5rem - (0.313rem / 2));
 
   li {
     cursor: pointer;
     padding: 0.688rem 0.938rem;
     width: 100%;
     box-sizing: border-box;
-    border-radius: 0.4rem;
+    border-radius: var(--standard-border-radius);
     transition: 0.1s;
     color: var(--foreground);
     margin: 0;
@@ -28,15 +30,16 @@ r-option {
 
   &:first-child {
     li {
-      border-radius: calc(var(--roundness) - (0.313rem / 2))
-        calc(var(--roundness) - (0.313rem / 2)) 0.4rem 0.4rem;
+      border-radius: var(--dynamic-border-radius) var(--dynamic-border-radius)
+        var(--standard-border-radius) var(--standard-border-radius);
     }
   }
 
   &:last-child {
     li {
-      border-radius: 0.4rem 0.4rem calc(var(--roundness) - (0.313rem / 2))
-        calc(var(--roundness) - (0.313rem / 2));
+      border-radius: var(--standard-border-radius) var(--standard-border-radius)
+        var(--dynamic-border-radius) var(--dynamic-border-radius);
+      margin-bottom: 0.4px;
     }
   }
 }
