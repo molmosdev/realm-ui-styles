@@ -17,10 +17,11 @@ packageJson.version = semver.inc(packageJson.version, releaseType);
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2), "utf8");
 
 // Execute npm publish
-exec("npm publish", (err, stdout, stderr) => {
+exec("npm publish --access public", (err, stdout, stderr) => {
   if (err) {
     console.error(`Error executing npm publish: ${stderr}`);
     process.exit(1);
   }
   console.log(stdout);
+  console.log(`Successfully published version ${packageJson.version} to npm`);
 });
