@@ -6,7 +6,7 @@ r-option {
     padding: 0.688rem 0.938rem;
     width: 100%;
     box-sizing: border-box;
-    border-radius: calc(var(--roundness) - (0.313rem / 2));
+    border-radius: 0.4rem;
     transition: 0.1s;
     color: var(--secondary-foreground);
     margin: 0;
@@ -23,6 +23,20 @@ r-option {
     &.disabled {
       pointer-events: none;
       opacity: 0.5;
+    }
+  }
+
+  &:first-child {
+    li {
+      border-radius: calc(var(--roundness) - (0.313rem / 2))
+        calc(var(--roundness) - (0.313rem / 2)) 0.4rem 0.4rem;
+    }
+  }
+
+  &:last-child {
+    li {
+      border-radius: 0.4rem 0.4rem calc(var(--roundness) - (0.313rem / 2))
+        calc(var(--roundness) - (0.313rem / 2));
     }
   }
 }
