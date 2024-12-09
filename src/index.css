@@ -4,6 +4,7 @@
 * {
   font-family: "Inter", sans-serif;
   outline-color: var(--primary);
+  line-height: auto !important;
 }
 
 :root {
