@@ -8,6 +8,8 @@ r-select {
     cursor: pointer;
     user-select: none;
     position: relative;
+    --padding-left: calc(0.938rem + var(--roundness) / 2);
+    padding: 0.688rem var(--padding-left);
     padding: 0.688rem 0.938rem;
     border-radius: var(--roundness);
     color: var(--input-foreground);
@@ -42,7 +44,7 @@ r-select {
 
     &.has-label {
       &.has-value {
-        padding: 1.2rem 0.938rem 0.313rem;
+        padding: 1.2rem var(--padding-left) 0.313rem;
       }
     }
 
