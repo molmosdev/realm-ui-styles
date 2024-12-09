@@ -1,5 +1,6 @@
 r-select {
   position: relative;
+  --padding-left: calc(0.938rem + var(--roundness) / 8);
 
   .select-box {
     z-index: 2;
@@ -8,9 +9,7 @@ r-select {
     cursor: pointer;
     user-select: none;
     position: relative;
-    --padding-left: calc(0.938rem + var(--roundness) / 2);
     padding: 0.688rem var(--padding-left);
-    padding: 0.688rem 0.938rem;
     border-radius: var(--roundness);
     color: var(--input-foreground);
     background-color: var(--input-background);

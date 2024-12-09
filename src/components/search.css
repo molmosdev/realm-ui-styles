@@ -1,5 +1,6 @@
 r-search {
   position: relative;
+  --padding-left: calc(0.938rem + var(--roundness) / 8);
 
   .select-box {
     z-index: 2;
@@ -7,7 +8,7 @@ r-search {
     min-height: 2.8rem;
     user-select: none;
     position: relative;
-    padding: 0.688rem 0.938rem;
+    padding: 0.688rem var(--padding-left);
     border-radius: var(--roundness);
     color: var(--input-foreground);
     background-color: var(--input-background);
@@ -42,7 +43,7 @@ r-search {
 
     &.has-label {
       &.has-value {
-        padding: 1.2rem 0.938rem 0.313rem;
+        padding: 1.2rem var(--padding-left) 0.313rem;
       }
     }
 
