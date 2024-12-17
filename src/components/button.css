@@ -63,14 +63,21 @@ r-button {
       color: var(--secondary-foreground);
     }
 
-    &:active {
-      transform: scale(0.97);
-      transition: 0.1s;
+    &:not(:disabled) {
+      &:active {
+        transform: scale(0.97);
+        transition: 0.1s;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transition: 0.2s;
+      }
     }
 
-    &:hover {
-      cursor: pointer;
-      transition: 0.2s;
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
   }
 }
