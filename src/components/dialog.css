@@ -10,7 +10,7 @@ r-dialog {
   pointer-events: none;
   z-index: 1000;
 
-  .background {
+  & > .background {
     position: fixed;
     top: 0;
     left: 0;
