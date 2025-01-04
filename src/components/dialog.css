@@ -17,6 +17,7 @@ r-dialog {
     height: 100dvh;
     width: 100vw;
     backdrop-filter: blur(6px);
+    background-color: rgba(17, 17, 17, 0.4);
     pointer-events: all;
     z-index: 1001;
 
@@ -29,7 +30,6 @@ r-dialog {
 
   .dialog {
     background: var(--background);
-    box-shadow: 0 10px 15px 5px rgba(1, 1, 1, 0.01);
     padding: 1rem;
     border-radius: calc(var(--roundness) + 2px);
     pointer-events: all;
