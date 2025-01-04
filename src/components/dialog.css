@@ -6,7 +6,6 @@ r-dialog {
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
   pointer-events: none;
   z-index: 1000;
 
@@ -36,5 +35,16 @@ r-dialog {
     pointer-events: all;
     position: relative;
     z-index: 1002;
+  }
+
+  @media (width > 768px) {
+    align-items: center;
+  }
+
+  @media (width < 768px) {
+    align-items: flex-end;
+    padding-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
