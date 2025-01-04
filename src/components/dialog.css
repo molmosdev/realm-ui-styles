@@ -6,6 +6,9 @@ r-dialog {
   width: 100vw;
   pointer-events: none;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   & > .background {
     position: fixed;
@@ -31,12 +34,7 @@ r-dialog {
     padding: 1rem;
     border-radius: calc(var(--roundness) + 2px);
     pointer-events: all;
-    position: relative;
     z-index: 1002;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
     @media (max-width: 768px) {
       &.mobile-bottom-active {
@@ -46,7 +44,7 @@ r-dialog {
         top: auto;
         bottom: 0;
         left: 0;
-        transform: none;
+        position: fixed;
       }
     }
   }
