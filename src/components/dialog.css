@@ -45,7 +45,6 @@ r-dialog {
     align-items: flex-end;
 
     .dialog {
-      padding-bottom: 0;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       width: 100vw;
