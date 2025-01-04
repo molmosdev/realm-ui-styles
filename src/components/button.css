@@ -29,32 +29,38 @@ r-button {
         color: var(--primary-foreground);
       }
 
-      &:hover {
-        background-color: color-mix(
-          in srgb,
-          var(--primary-foreground) 10%,
-          var(--primary)
-        );
+      @media (width > 768px) {
+        &:hover {
+          background-color: color-mix(
+            in srgb,
+            var(--primary-foreground) 10%,
+            var(--primary)
+          );
+        }
       }
     }
 
     &.secondary {
       background-color: var(--secondary);
 
-      &:hover {
-        background-color: color-mix(
-          in srgb,
-          var(--secondary-foreground) 10%,
-          var(--secondary)
-        );
+      @media (width > 768px) {
+        &:hover {
+          background-color: color-mix(
+            in srgb,
+            var(--secondary-foreground) 10%,
+            var(--secondary)
+          );
+        }
       }
     }
 
     &.ghost {
       background-color: transparent;
 
-      &:hover {
-        background-color: var(--secondary);
+      @media (width > 768px) {
+        &:hover {
+          background-color: var(--secondary);
+        }
       }
     }
 
@@ -69,9 +75,11 @@ r-button {
         transition: 0.1s;
       }
 
-      &:hover {
-        cursor: pointer;
-        transition: 0.2s;
+      @media (width > 768px) {
+        &:hover {
+          cursor: pointer;
+          transition: 0.2s;
+        }
       }
     }
 
