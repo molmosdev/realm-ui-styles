@@ -43,9 +43,12 @@ r-dialog {
 
   @media (width < 768px) {
     align-items: flex-end;
-    padding-bottom: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    width: 100vw;
+
+    .dialog {
+      padding-bottom: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      width: 100vw;
+    }
   }
 }
