@@ -35,6 +35,7 @@ r-dialog {
     border-radius: calc(var(--roundness) + 2px);
     pointer-events: all;
     z-index: 1002;
+    box-sizing: border-box;
 
     @media (max-width: 768px) {
       &.mobile-bottom-active {
