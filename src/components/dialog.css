@@ -16,9 +16,8 @@ r-dialog {
     left: 0;
     height: 100dvh;
     width: 100vw;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(6px);
     pointer-events: all;
-    background-color: rgba(17, 17, 17, 0.4);
     z-index: 1001;
 
     &.click-outside {
