@@ -12,7 +12,8 @@ r-select {
     padding: 0.688rem var(--padding-left);
     border-radius: var(--roundness);
     color: var(--input-foreground);
-    background-color: var(--input-background);
+    background-color: var(--background);
+    border: 1px solid var(--border-color);
     display: flex;
     align-items: center;
 
@@ -25,7 +26,7 @@ r-select {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(to right, transparent, var(--light-grey) 50%);
+      background: linear-gradient(0deg, transparent 0%, var(--background) 50%);
       border-radius: 0 var(--roundness) var(--roundness) 0;
 
       &:not(.clearable) {

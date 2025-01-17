@@ -5,7 +5,7 @@ r-vertical-nav {
     gap: 0.2rem;
     user-select: none;
     width: var(--vertical-nav-width);
-    transition: width ease 0.3s;
+    transition: width ease 0.2s;
 
     r-vertical-nav-group {
       display: flex;
@@ -18,12 +18,16 @@ r-vertical-nav {
         align-items: center;
         height: 2.8rem;
         padding-inline: 1rem 0.8rem;
-        transition: padding-inline ease 0.3s;
+        transition: padding-inline ease 0.2s;
         border-radius: var(--roundness);
 
         &:hover {
           cursor: pointer;
-          background-color: var(--secondary);
+          background-color: color-mix(
+            in srgb,
+            var(--foreground) 5%,
+            var(--background)
+          );
           transition: 0.2s;
         }
 
@@ -35,13 +39,13 @@ r-vertical-nav {
 
         .group-icon,
         .group-text {
-          transition: opacity ease 0.3s, display ease 0.3s allow-discrete;
+          transition: opacity ease 0.2s, display ease 0.2s allow-discrete;
         }
 
         .group-arrows {
           display: flex;
           align-items: center;
-          transition: opacity ease 0.3s, display ease 0.3s allow-discrete;
+          transition: opacity ease 0.2s, display ease 0.2s allow-discrete;
         }
       }
 
@@ -50,7 +54,7 @@ r-vertical-nav {
         flex-direction: column;
         gap: 0.2rem;
         padding-left: 1rem;
-        transition: padding-left ease 0.3s;
+        transition: padding-left ease 0.2s;
       }
     }
 
@@ -63,8 +67,8 @@ r-vertical-nav {
         padding-inline: 1rem;
         border-radius: var(--roundness);
         opacity: 1;
-        transition: opacity ease 0.3s 0.3s allow-discrete,
-          padding-inline ease 0.3s;
+        transition: opacity ease 0.2s 0.2s allow-discrete,
+          padding-inline ease 0.2s;
 
         @starting-style {
           opacity: 0;
@@ -72,16 +76,24 @@ r-vertical-nav {
 
         &:hover {
           cursor: pointer;
-          background-color: var(--secondary);
+          background-color: color-mix(
+            in srgb,
+            var(--foreground) 5%,
+            var(--background)
+          );
           transition: 0.2s;
         }
 
         &.active {
-          background-color: var(--secondary);
+          background-color: color-mix(
+            in srgb,
+            var(--foreground) 5%,
+            var(--background)
+          );
         }
 
         .item-text {
-          transition: opacity ease 0.3s, display ease 0.3s allow-discrete;
+          transition: opacity ease 0.2s, display ease 0.2s allow-discrete;
         }
       }
     }
@@ -97,7 +109,7 @@ r-vertical-nav {
           .group-text {
             opacity: 1;
             display: flex;
-            transition-delay: 0.3s;
+            transition-delay: 0.2s;
 
             @starting-style {
               opacity: 0;
@@ -107,7 +119,7 @@ r-vertical-nav {
           .group-arrows {
             opacity: 1;
             display: flex;
-            transition-delay: 0.3s;
+            transition-delay: 0.2s;
 
             @starting-style {
               opacity: 0;
@@ -126,7 +138,7 @@ r-vertical-nav {
           .item-text {
             opacity: 1;
             display: flex;
-            transition-delay: 0.3s;
+            transition-delay: 0.2s;
 
             @starting-style {
               opacity: 0;
@@ -138,12 +150,12 @@ r-vertical-nav {
 
     &:not(.extended) {
       width: 2.8rem;
-      transition-delay: 0.3s;
+      transition-delay: 0.2s;
 
       r-vertical-nav-group {
         .group-wrapper {
           padding-inline: 0.77rem;
-          transition-delay: 0.3s;
+          transition-delay: 0.2s;
           transition-property: padding-inline;
 
           .group-icon .group-text {
@@ -159,14 +171,14 @@ r-vertical-nav {
 
         .nested-wrapper {
           padding-left: 0rem;
-          transition-delay: 0.3s;
+          transition-delay: 0.2s;
         }
       }
 
       r-vertical-nav-item {
         .item-wrapper {
           padding-inline: 0.77rem;
-          transition-delay: 0.3s;
+          transition-delay: 0.2s;
           transition-property: padding-inline;
 
           .item-text {
@@ -178,39 +190,3 @@ r-vertical-nav {
     }
   }
 }
-
-/* Animations */
-
-/* r-vertical-nav {
-  .nav-wrapper {
-    &.extended {
-      width: 200px;
-      transition: width ease 0.3s;
-
-      r-vertical-nav-item {
-        .item-wrapper {
-          .item-text {
-            visibility: visible;
-            opacity: 1;
-            transition: opacity 0.3s 0.3s ease, visibility 0.3s 0.3s;
-          }
-        }
-      }
-    }
-
-    &:not(.extended) {
-      width: 2.8rem;
-      transition: width ease 0.3s 0.3s;
-
-      r-vertical-nav-item {
-        .item-wrapper {
-          .item-text {
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s 0.3s;
-          }
-        }
-      }
-    }
-  }
-} */

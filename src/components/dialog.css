@@ -30,7 +30,6 @@ r-dialog {
 
   .dialog {
     background: var(--background);
-    padding: 1rem;
     border-radius: calc(var(--roundness) + 2px);
     pointer-events: all;
     z-index: 1002;

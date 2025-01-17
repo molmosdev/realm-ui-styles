@@ -35,7 +35,7 @@ r-dropdown-content {
 r-dropdown-title {
   padding: 3px 8px;
   zoom: 0.95;
-  color: color-mix(in srgb, var(--foreground) 40%, var(--secondary));
+  color: color-mix(in srgb, var(--foreground) 50%, var(--background));
 }
 
 r-dropdown-item {
@@ -60,7 +60,7 @@ r-dropdown-item {
     &:not(.disabled) {
       &:hover {
         cursor: pointer;
-        background-color: var(--secondary);
+        background: color-mix(in srgb, var(--foreground) 5%, var(--background));
         transition: 0.2s;
       }
     }

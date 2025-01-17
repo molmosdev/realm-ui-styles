@@ -36,7 +36,11 @@ r-user {
     color: var(--input-foreground);
     cursor: pointer;
     user-select: none;
-    background-color: var(--input-background);
+    background-color: color-mix(
+      in srgb,
+      var(--foreground) 5%,
+      var(--background)
+    );
     position: relative;
 
     &.has-label {

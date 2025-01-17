@@ -14,7 +14,11 @@ r-option {
     margin: 0;
 
     &.highlighted {
-      background-color: var(--secondary);
+      background-color: color-mix(
+        in srgb,
+        var(--foreground) 5%,
+        var(--background)
+      );
     }
 
     &.selected {

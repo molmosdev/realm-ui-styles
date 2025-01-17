@@ -17,25 +17,23 @@ r-tab {
     font-size: 100%;
     border: none;
     user-select: none;
+    border: 1px solid transparent;
 
     &:hover {
       cursor: pointer;
     }
 
     &.selected {
-      background-color: color-mix(
-        in srgb,
-        var(--secondary-foreground) 5%,
-        var(--secondary)
-      );
+      background-color: var(--background);
+      border-color: var(--border-color);
     }
 
     &:not(.selected) {
       &.highlighted {
-        background-color: color-mix(
+        background: color-mix(
           in srgb,
-          var(--secondary-foreground) 5%,
-          var(--secondary)
+          var(--foreground) 10%,
+          var(--background)
         );
       }
     }

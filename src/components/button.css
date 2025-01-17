@@ -24,6 +24,7 @@ r-button {
     &.primary {
       background-color: var(--primary);
       color: var(--primary-foreground);
+      border: 1px solid var(--primary-border-color);
 
       .icon {
         color: var(--primary-foreground);
@@ -33,7 +34,7 @@ r-button {
         &:hover {
           background-color: color-mix(
             in srgb,
-            var(--primary-foreground) 10%,
+            var(--primary-foreground) 5%,
             var(--primary)
           );
         }
@@ -42,12 +43,13 @@ r-button {
 
     &.secondary {
       background-color: var(--secondary);
+      border: 1px solid var(--secondary-border-color);
 
       @media (width > 768px) {
         &:hover {
           background-color: color-mix(
             in srgb,
-            var(--secondary-foreground) 10%,
+            var(--secondary-foreground) 5%,
             var(--secondary)
           );
         }

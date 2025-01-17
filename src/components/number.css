@@ -43,7 +43,6 @@ r-number {
 
   input {
     height: 2.8rem;
-    border: none;
     width: 100%;
     padding: 0.688rem 0.938rem;
     box-sizing: border-box;
@@ -51,8 +50,13 @@ r-number {
     color: var(--input-foreground);
     cursor: pointer;
     user-select: none;
-    background-color: var(--input-background);
+    background-color: color-mix(
+      in srgb,
+      var(--foreground) 5%,
+      var(--background)
+    );
     position: relative;
+    border: 1px solid var(--border-color);
 
     &.has-label {
       &.has-value,
@@ -71,14 +75,12 @@ r-number {
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    border: none;
     margin: 0;
   }
 
   /* Firefox */
   input[type="number"] {
     appearance: textfield;
-    border: none;
     -moz-appearance: textfield;
   }
 }

@@ -10,7 +10,11 @@ r-textarea {
     z-index: 1;
     pointer-events: none;
     color: var(--input-foreground);
-    background: linear-gradient(0deg, transparent 0%, var(--light-grey) 50%);
+    background: linear-gradient(
+      0deg,
+      transparent 0%,
+      color-mix(in srgb, var(--foreground) 5%, var(--background)) 50%
+    );
     pointer-events: none;
     transition: 0.2s;
 
@@ -29,7 +33,6 @@ r-textarea {
 
   textarea {
     min-height: 2.8rem;
-    border: none;
     width: 100%;
     padding: 0.688rem 0.938rem;
     box-sizing: border-box;
@@ -37,8 +40,13 @@ r-textarea {
     color: var(--input-foreground);
     cursor: pointer;
     user-select: none;
-    background-color: var(--input-background);
+    background-color: color-mix(
+      in srgb,
+      var(--foreground) 5%,
+      var(--background)
+    );
     position: relative;
+    border: 1px solid var(--border-color);
 
     &.has-label {
       &:focus-visible,
