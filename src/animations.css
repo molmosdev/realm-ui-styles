@@ -1,0 +1,17 @@
+.r-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+
+  &.delay {
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
