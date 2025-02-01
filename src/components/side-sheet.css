@@ -1,6 +1,6 @@
 r-side-sheet {
   display: block;
-  position: relative;
+  position: absolute;
 
   .side-sheet-overlay {
     position: fixed;

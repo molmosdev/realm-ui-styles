@@ -1,5 +1,6 @@
 r-bottom-sheet {
   display: block;
+  position: absolute;
 
   .bottom-sheet-overlay {
     position: fixed;
