@@ -1,0 +1,26 @@
+:root {
+  /* Base colors */
+  --black: #242424;
+  --white: #fff;
+  --light-grey: #fafafa;
+  --mid-grey: #eeeeee;
+  --grey: #798194;
+
+  /* rem-ui colors */
+  --app-background: var(--white);
+  --background: var(--white);
+  --foreground: var(--grey);
+  --border-color: transparent;
+  --primary: var(--black);
+  --primary-foreground: var(--white);
+  --primary-border-color: var(--black);
+  --secondary: var(--light-grey);
+  --secondary-foreground: var(--black);
+  --secondary-border-color: var(--light-grey);
+  --error: #fff0f0;
+  --error-foreground: #c40000ab;
+  --input-background: var(--light-grey);
+  --input-foreground: var(--grey);
+  --roundness: 1.5rem;
+  --button-padding-inline: 1.9rem;
+}
