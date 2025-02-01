@@ -1,7 +1,7 @@
 @import "variables.css";
 @import "fonts.css";
 @import "animations.css";
-@import "./components/components.css";
+@import "components.css";
 
 * {
   font-family: "Inter", sans-serif;
