@@ -1,26 +1,39 @@
 :root {
-  /* Base colors */
-  --black: #242424;
-  --white: #fff;
-  --light-grey: #fafafa;
-  --mid-grey: #eeeeee;
-  --grey: #798194;
+  /* Base colors - Fundamental colors to build the theme */
+  --black: #242424; /* Main color for text and primary elements */
+  --white: #fff; /* Base color for backgrounds and contrast */
+  --light-grey: #ececec; /* Alternative background and secondary elements */
+  --mid-grey: #eeeeee; /* Borders and separators */
+  --grey: #798194; /* Secondary text and disabled elements */
 
-  /* rem-ui colors */
-  --app-background: var(--white);
-  --background: var(--white);
-  --foreground: var(--grey);
-  --border-color: transparent;
-  --primary: var(--black);
-  --primary-foreground: var(--white);
-  --primary-border-color: var(--black);
-  --secondary: var(--light-grey);
-  --secondary-foreground: var(--black);
-  --secondary-border-color: var(--light-grey);
-  --error: #fff0f0;
-  --error-foreground: #c40000ab;
-  --input-background: var(--light-grey);
-  --input-foreground: var(--grey);
-  --roundness: 1.5rem;
-  --button-padding-inline: 1.9rem;
+  /* rem-ui theme variables - UI theme variables */
+  /* Backgrounds and base colors */
+  --app-background: var(--white); /* General application background */
+  --background: var(--white); /* Components background */
+  --foreground: var(--grey); /* Default text color */
+  --border-color: transparent; /* Default border color */
+
+  /* Primary color scheme */
+  --primary: var(--black); /* Main application color */
+  --primary-foreground: var(--white); /* Text on primary elements */
+  --primary-border-color: var(--black); /* Borders for primary elements */
+
+  /* Secondary color scheme */
+  --secondary: var(--background); /* Secondary color for alternative elements */
+  --secondary-foreground: var(--black); /* Text on secondary elements */
+  --secondary-border-color: var(
+    --light-grey
+  ); /* Borders for secondary elements */
+
+  /* States and feedback */
+  --error: #fff0f0; /* Background for error states */
+  --error-foreground: #c40000ab; /* Text for error messages */
+
+  /* Inputs and form controls */
+  --input-background: var(--light-grey); /* Background for input fields */
+  --input-foreground: var(--grey); /* Text color in inputs */
+
+  /* Dimensions and spacing */
+  --roundness: 1.5rem; /* Border radius */
+  --button-padding-inline: 1.9rem; /* Horizontal padding for buttons */
 }
