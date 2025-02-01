@@ -29,6 +29,7 @@ r-bottom-sheet {
     background-color: var(--background);
     border-radius: 16px 16px 0 0;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border-color);
     display: none;
     z-index: 1001;
     will-change: transform;
@@ -47,7 +48,7 @@ r-bottom-sheet {
     .drag-indicator {
       width: 40px;
       height: 4px;
-      background-color: #ddd;
+      background-color: var(--border-color);
       border-radius: 2px;
       margin: 12px auto;
       transition: background-color 0.2s ease;
