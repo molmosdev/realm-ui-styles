@@ -1,5 +1,6 @@
 r-button {
-  button {
+  button,
+  a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +15,7 @@ r-button {
     width: 100%;
     font-size: 100%;
     border: none;
+    text-decoration: none;
 
     &:not(:has(span)) {
       &:has(.icon) {
@@ -71,7 +73,7 @@ r-button {
       color: var(--secondary-foreground);
     }
 
-    &:not(:disabled) {
+    &:not(:disabled):not(.disabled) {
       &:active {
         transform: scale(0.97);
         transition: 0.1s;
@@ -85,9 +87,11 @@ r-button {
       }
     }
 
-    &:disabled {
+    &:disabled,
+    &.disabled {
       opacity: 0.5;
       cursor: not-allowed;
+      pointer-events: none;
     }
   }
 }
