@@ -1,8 +1,8 @@
-r-side-panel {
+r-side-sheet {
   display: block;
   position: relative;
 
-  .side-panel-overlay {
+  .side-sheet-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -20,7 +20,7 @@ r-side-panel {
     }
   }
 
-  .side-panel {
+  .side-sheet {
     position: fixed;
     top: 0;
     height: 100%;
@@ -62,7 +62,7 @@ r-side-panel {
     }
   }
 
-  .side-panel-content {
+  .side-sheet-content {
     padding: 20px;
     margin-top: 40px;
   }
