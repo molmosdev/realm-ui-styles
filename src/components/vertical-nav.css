@@ -6,6 +6,10 @@ r-vertical-nav {
     user-select: none;
     width: var(--vertical-nav-width);
     transition: width ease 0.2s;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) var(--bg-color);
+    height: 100%;
 
     r-vertical-nav-group {
       display: flex;

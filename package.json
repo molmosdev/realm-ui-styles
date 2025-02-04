@@ -1,6 +1,6 @@
 {
   "name": "@rem-ui/styles",
-  "version": "0.0.30",
+  "version": "0.0.32",
   "main": "src/index.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
