@@ -10,6 +10,7 @@ r-vertical-nav {
     scrollbar-width: thin;
     scrollbar-color: var(--border-color) var(--bg-color);
     height: 100%;
+    padding-right: 0.75rem;
 
     r-vertical-nav-group {
       display: flex;
