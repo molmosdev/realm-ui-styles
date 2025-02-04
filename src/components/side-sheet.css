@@ -54,7 +54,6 @@ r-side-sheet {
     border: none;
     font-size: 24px;
     cursor: pointer;
-    padding: 5px 10px;
     color: #666;
 
     &:hover {
